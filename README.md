@@ -106,7 +106,7 @@ _As an AI developer, I want to ensure that my training data is unbiased so that 
 
 ---
 
-### Requirement 3: Analyze Dataset Balance Across Categories
+### Requirement 3:
 
 **User Story:**
 _As an AI developer, I want the training data to be analyzed for balance across different categories so that the AI model does not favor certain inputs over others._
@@ -152,5 +152,53 @@ _As an AI developer, I want the training data to be analyzed for balance across 
 - Should the tool support multiple datasets or focus on a single dataset at a time?
 - What criteria should trigger an imbalance alert?
 - Should the alert system support different severity levels?
+
+---
+
+### Requirement 4: 
+
+**User Story:** 
+_As an AI developer, I want to ensure that the training data collected through web scraping is clean and consistent so that AI models can be trained without errors caused by duplicate data._
+
+---
+
+###  Assumptions & Validation
+
+- Web scraping often results in duplicate, missing, or incorrect data.
+  - **Method 1:** Perform an initial dataset scan to detect duplicates and missing values.
+
+- Inconsistent data can negatively impact AI model accuracy.
+  - **Method 2:** Compare model performance on cleaned vs. uncleaned datasets.
+
+- A data-cleaning and validation process will improve the reliability of the training dataset.
+  - **Method 3:** Implement automated scripts to clean and validate data before AI model training.
+
+---
+
+###  Actionable Items
+
+1. **Implement a duplicate detection and removal system**
+   - Identify and remove duplicate entries from the dataset
+   - Use hash-based or similarity-based techniques to detect near-duplicates
+   - Validate dataset integrity after deduplication
+
+2. **Develop automated validation scripts to check for inconsistencies**
+   - Implement scripts to detect missing or incorrect data
+   - Apply rule-based validation checks
+   - Ensure logging for any data inconsistencies found
+
+3. **Create logging and reporting tools for incorrect data entries**
+   - Develop a logging mechanism to track data quality issues
+   - Generate periodic reports on dataset health and corrections applied
+   - Provide developers with actionable insights for manual review and correction
+
+---
+
+###  Follow-Up Questions
+
+- What criteria will define a duplicate entry in the dataset?
+- How frequently should data quality reports be generated and reviewed?
+- What information should be included in the reports to help developers take corrective action?
+- Should the validation process run automatically after each scraping session or on a scheduled basis?
 
 ---
