@@ -13,6 +13,8 @@ The client, an AI developer, uses web scraping to collect training data but face
 **User Story:**
 _As an AI developer, I want training questions to be categorized separately from answers so that AI models can be tested without being biased by pre-exposed answers._
 
+---
+
 ### Assumptions & Validation
 - The current dataset does not separate questions from answers.
   - **Method 1:** Review the dataset to confirm that questions and answers are stored together.
@@ -22,6 +24,8 @@ _As an AI developer, I want training questions to be categorized separately from
   - **Method 3:** Design a relational schema and test retrieval efficiency with sample queries.
 - A manual tagging system is necessary to categorize questions accurately. 
   - **Method 4:** Run a comparative test between automated and manual tagging to ensure manual tagging improves categorization accuracy.
+
+---
 
 ### Actionable Items
 1. **Develop a database schema to store questions and answers separately**
@@ -38,6 +42,8 @@ _As an AI developer, I want training questions to be categorized separately from
    - Design an interface (UI or API) for tagging questions
    - Store and manage tagged metadata in the database
    - Validate and refine the system by comparing manual and automated tagging accuracy
+
+---
 
 ### Follow-Up Questions
 - Are there existing labels or metadata that indicate a distinction between questions and answers? 
