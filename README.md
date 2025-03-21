@@ -202,3 +202,48 @@ _As an AI developer, I want to ensure that the training data collected through w
 - Should the validation process run automatically after each scraping session or on a scheduled basis?
 
 ---
+
+### Requirement 5:
+
+**User Story:** 
+_As an AI developer, I want to track the source and history of training data so that I can verify its reliability and ensure compliance with ethical AI standards._
+
+---
+
+###  Assumptions & Validation
+
+- Developers need to know where data is scraped from to avoid legal or ethical issues.
+  - **Method 1:** Store metadata for each data entry including source URL and timestamp.
+
+- Tracking dataset modifications is essential for debugging AI model performance.
+  - **Method 2:** Implement a logging system to track all changes made to the dataset over time.
+
+- A data provenance system improves transparency and trustworthiness.
+  - **Method 3:** Create a user-accessible dashboard that displays the full history and origin of data entries.
+
+---
+
+###  Actionable Items
+
+1. **Implement metadata tracking for each dataset entry**
+   - Store details like source URL, scrape timestamp, and content type
+   - Link metadata to each data record for traceability
+
+2. **Develop an audit log to track data modifications**
+   - Record each change to data entries including the time, user/system, and nature of the change
+   - Ensure logs are immutable and securely stored
+
+3. **Create a user-accessible dashboard to review data provenance**
+   - Display original source and change history for each dataset entry
+   - Include filtering options (e.g., by date, category, user)
+   - Ensure the dashboard is readable and secure for developer use
+
+---
+
+###  Follow-Up Questions
+
+- What system or role will be responsible for reviewing and maintaining the audit logs?
+- What filtering or search capabilities should the dashboard provide to efficiently review provenance data?
+- Should access to provenance data be restricted based on user roles or permissions?
+
+---
